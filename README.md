@@ -12,7 +12,9 @@ Naloži [Stylus](https://add0n.com/stylus.html).
 
 Ko imaš naložen Stylus, klikni:
 
-[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-%233daee9?style=for-the-badge)](https://raw.githubusercontent.com/hackguy25/fmf-dark-theme/master/fmf-dark.user.css)
+[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-%233daee9?style=for-the-badge)](https://raw.githubusercontent.com/Hexte/arnes-dark-theme/master/arnes-dark.user.css)
+
+
 
 ## Pozor!
 
