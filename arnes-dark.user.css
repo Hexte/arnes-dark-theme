@@ -1,12 +1,12 @@
 /* ==UserStyle==
-@name         fmf-dark
-@author       Blaž Rojc (https://github.com/hackguy25)
-@namespace    https://github.com/hackguy25/fmf-dark-theme
+@name         arnes-dark
+@author       Lucijan Hrastnik (https://github.com/Hexte)
+@namespace    https://github.com/Hexte/arnes-dark-theme
 @version      0.0.1
-@homepageURL  https://github.com/hackguy25/fmf-dark-theme
-@supportURL   https://github.com/hackguy25/fmf-dark-theme/issues
-@updateURL    https://raw.githubusercontent.com/hackguy25/fmf-dark-theme/master/fmf-dark.user.css
-@description  A dark theme of the FMF online moodle classrom for those long nights.
+@homepageURL  https://github.com/Hexte/arnes-dark-theme
+@supportURL   https://github.com/Hexte/arnes-dark-theme/issues
+@updateURL    https://raw.githubusercontent.com/Hexte/arnes-dark-theme/master/arnes-dark.user.css
+@description  A dark theme of the Arnes online classrom for those long nights.
 @license      unlicense
 
 @preprocessor less
@@ -15,8 +15,9 @@
 
 ==/UserStyle== */
 
-@-moz-document domain("ucilnica.fmf.uni-lj.si") {
-    
+
+@-moz-document domain("ucilnice.arnes.si") {
+
     :root {
         --text-color: rgba(255, 255, 255, @textIntensity);
         --muted-text-color: rgba(255, 255, 255, @textIntensity*0.6);
@@ -26,20 +27,19 @@
         --accent-transparent: ~"@{accentColor}33";
         --a-bit-darker: #00000022;
     }
-    
     /* ---- Navbar ---- */
     .navbar {
         background-color: var(--site-bg-color);
     }
-    
+
     .site-name {
         color: @accentColor;
     }
-    
+
     .navbar-light .navbar-nav .nav-link {
         color: rgba(255, 255, 255, 0.5);
     }
-    
+
     .dropdown-menu {
         background-color: var(--site-bg-color);
     }
@@ -48,122 +48,150 @@
     .dropdown-item:focus {
         background-color: #0000005c;
     }
-    
+
     .dropdown-item.active,
     .dropdown-item:active {
         color: var(--text-color) !important;
     }
-    
+
     .icon {
         color: var(--text-color) !important;
     }
-    
+
     .dropdown-divider {
         border-color: var(--text-color);
     }
-    
+
+    #nav-drawer {
+        background-color: #2d2d2d;
+    }
+
+    .list-group-item.active {
+        border-color: @accentColor;
+    }
     /* ---- Body ---- */
     .d-print-block {
         color: var(--site-bg-color);
         background-color: var(--site-bg-color);
     }
-    
+
     .card {
         background-color: var(--content-bg-color);
         box-shadow: 0px 0px #fff0 !important;
         border: 3px solid var(--site-bg-color)
     }
-    
+
     #region-main {
         background-color: var(--content-bg-color);
     }
-    
+
     div {
         color: var(--text-color) !important;
     }
-    
+
     .alert-danger {
         background-color: #ff000044;
     }
-    
+
     #search,
+    #searchform_search,
     #shortsearchbox {
         color: var(--text-color) !important;
         background-color: var(--site-bg-color) !important;
+        border-color: @accentColor;
+        border-top-left-radius: .25rem;
+        border-bottom-left-radius: .25rem;
     }
-    
+
     #page-footer {
-        background-color: var(--content-bg-color)  !important;
+        background-color: var(--content-bg-color) !important;
         border-top: 3px solid var(--site-bg-color) !important;
     }
-    
+
     .popover-body {
-        background-color: var(--bttn-color)  !important;
+        background-color: var(--bttn-color) !important;
         border: none;
     }
-    
+
     .popover-header {
-        background-color: var(--bttn-color)  !important;
+        background-color: var(--bttn-color) !important;
         border: none;
     }
-    
+
     .main {
-        border-color : var(--text-color) !important;
+        border-color: var(--text-color) !important;
     }
-    
+
+    .breadcrumb {
+        background-color: var(--content-bg-color) !important;
+    }
+
+    .region_main_settings_menu_proxy {
+        background-color: var(--content-bg-color) !important;
+    }
+
+    .form-control {
+        background-color: var(--site-bg-color) !important;
+    }
+
+    .submissionstatussubmitted, .submissionnotgraded {
+        background-color: #0000 !important;
+    }
+
+    .topics pre {
+        color: white !important;
+    }
     /* ---- Notifications ---- */
     .popover-region-container {
         background-color: var(--content-bg-color);
         border: 3px solid var(--site-bg-color);
         border-radius: 4px;
     }
-    
+
     .popover-region-toggle::before {
         border-bottom: 11px solid var(--site-bg-color) !important;
     }
-    
+
     .popover-region-toggle::after {
         border-bottom: 9px solid var(--content-bg-color) !important;
     }
-    
+
     .popover-region-header-container {
         border-bottom: 2px solid var(--site-bg-color);
     }
-    
+
     .popover-region-footer-container {
         background-color: var(--content-bg-color);
         border-top: 2px solid var(--site-bg-color);
     }
-    
-    
     /* ---- Forums ---- */
     table, tr, tbody, td,
     th {
         color: var(--text-color) !important;
-        border-color : var(--text-color) !important;
+        border-color: var(--text-color) !important;
     }
-    
+
     .btn,
     .btn-primary,
     .btn-secondary {
         color: var(--text-color) !important;
-        background-color: var(--bttn-color);
+        background-color: var(--bttn-color) !important;
         border-color: @accentColor;
     }
-    
-    .btn:hover,
-    .btn-primary:hover,
-    .btn-secondary:hover {
-        color: var(--text-color);
-        background-color: var(--bttn-color);
-        border-color: var(--text-color);
-    }
-    
+
+        .btn:hover,
+        .btn-primary:hover,
+        .btn-secondary:hover {
+            color: var(--text-color);
+            background-color: var(--bttn-color);
+            border-color: var(--text-color);
+        }
+
     .btn-link {
         background-color: none;
         border: none;
     }
-    
+
     .custom-select {
         border-radius: 3px;
         margin-left: 10px !important;
@@ -171,91 +199,88 @@
         border: 1px solid #ced4daab;
         color: var(--text-color);
     }
-    
+
     .border {
         border: 1px solid var(--text-color) !important;
         border-radius: 4px;
     }
-    
+
     .border-bottom {
         border-color: var(--text-color) !important;
     }
-    
+
     .bg-light {
         background-color: var(--content-bg-color) !important;
     }
-    
+
     .bg-white {
         background-color: var(--content-bg-color) !important;
     }
-    
+
     .my-2 {
         border: 3px solid var(--site-bg-color) !important;
         border-radius: 4px;
     }
-    
+
     .p-2 {
-        padding: .7rem!important;
+        padding: .7rem !important;
     }
-    
+
     .page-item.active .page-link {
         border-color: @accentColor;
         background-color: @accentColor;
     }
-    
     /* ---- Dashboard ---- */
     .page-link {
         background-color: var(--bttn-color);
-        border-color : var(--text-color);
+        border-color: var(--text-color);
     }
-    
+
     .page-item.disabled .page-link {
         color: var(--content-bg-color);
         background-color: var(--content-bg-color);
-        border-color : var(--content-bg-color);
+        border-color: var(--content-bg-color);
     }
-    
+
     .list-group-item {
         background-color: var(--content-bg-color);
     }
-    
+
     .calendar_event_course {
         background-color: var(--accent-transparent) !important;
     }
-    
+
     .text-muted {
         color: var(--muted-text-color) !important;
     }
-    
     /* ---- Settings ---- */
     .preferences-container .preference-table tr th:nth-child(even),
     .preferences-container .preference-table tr td:nth-child(even) {
         background-color: var(--a-bit-darker);
     }
-    
+
     .preferences-container .preference-table .preference-row .preference-state .preference-state-status-container {
         width: 80px;
     }
-    
+
     .preferences-container .preference-table tr td:not(:first-child) {
         width: 280px;
         text-align: center;
     }
-    
+
     #qrcode {
         width: 185px;
         background-color: white;
     }
-    
+
     .preferences-container .preference-table thead th {
         min-width: 280px;
     }
-    
     /* ---- Scrollbars ---- */
     ::-webkit-scrollbar {
         width: 16px
     }
-    
+
     ::-webkit-scrollbar-track {
         background: var(--site-bg-color);
     }
@@ -264,10 +289,9 @@
         background: var(--bttn-color);
     }
 
-    ::-webkit-scrollbar-thumb:hover {
-        background: var(--accent-transparent);
-    }
-    
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-transparent);
+        }
     /* ---- Standard selectors ---- */
     a {
         transition: 0.05s;
@@ -276,60 +300,102 @@
         box-shadow: none;
     }
 
-    a:hover {
-        color: var(--text-color) !important;
-        background-color: transparent !important;
-        text-decoration: none !important;
-    }
+        a:hover {
+            color: var(--text-color) !important;
+            background-color: transparent !important;
+            text-decoration: none !important;
+        }
 
-    a:active {
-        background: none !important;
-        background-color: transparent !important;
-        text-decoration: none !important;
-    }
+        a:active {
+            background: none !important;
+            background-color: transparent !important;
+            text-decoration: none !important;
+        }
 
-    a:focus {
-        background: none !important;
-        background-color: transparent !important;
-        text-decoration: none !important;
-    }
+        a:focus {
+            background: none !important;
+            background-color: transparent !important;
+            text-decoration: none !important;
+        }
 
-    a:selection {
-        background: none !important;
-        background-color: transparent !important;
-        text-decoration: none !important;
-    }
-    
+        a:selection {
+            background: none !important;
+            background-color: transparent !important;
+            text-decoration: none !important;
+        }
+
     *:focus-within {
         background-color: none !important;
         outline: 0 !important;
         -webkit-box-shadow: none !important;
         box-shadow: 0 !important;
     }
-    
 }
 
-/* ---- Login page ---- */
+@-moz-document url-prefix("https://ds.aai.arnes.si"), url-prefix("https://idp.aai.arnes.si") {
 
-@-moz-document url("https://ucilnica.fmf.uni-lj.si/login/index.php") {
+    :root {
+        --text-color: rgba(255, 255, 255, @textIntensity);
+        --muted-text-color: rgba(255, 255, 255, @textIntensity*0.75);
+        --site-bg-color: #202020;
+        --content-bg-color: #2d2d2d;
+        --content-br-color: #212121;
+        --bttn-color: #3c3c3c;
+        --accent-transparent: ~"@{accentColor}33";
+        --a-bit-darker: #00000022;
+    }
 
-    #region-main-box {
-        background-color: #202020!important;
+    .navbar-default {
+        background-color: var(--site-bg-color) !important;
+    }
+
+    .footer-above, .footer-below {
+        background-color: var(--site-bg-color) !important;
+    }
+
+    header {
+        background: var(--content-bg-color) !important;
+    }
+
+    body {
+        background-color: black !important;
+        height: 100%;
+    }
+
+    html {
+        height: 100% !important;
+    }
+
+    .select2-highlighted {
+        background-color: var(--site-bg-color) !important;
+        color: #fff;
+        border-radius: .25rem;
+        width: 99.4%;
+    }
+
+    #select2-drop {
+        background-color: var(--content-bg-color) !important;
+        color: #fff
+    }
+
+    .select2-input {
+        background: var(--content-bg-color) !important;
+    }
+
+    .select2-container .select2-choice, .select2-default, .select2-chosen, #select2-drop {
+        border-color: var(--content-br-color) !important;
+        background: var(--content-br-color) !important;
+        color: var(--text-color) !important;
+    }
+
+    .select2-arrow, .select2-arrow b {
+        background-color: var(--content-br-color) !important;
+        border: 0 !important;
+    }
+
+    .footer-col a:hover {
+        color: var(--muted-text-color) !important;
     }
 }
 
-/* ---- Course fixes ---- */
-
-@-moz-document url("https://ucilnica.fmf.uni-lj.si/course/view.php?id=101") {
-    /* Računalniško podprto (geometrijsko) oblikovanje */
-    [style="color: rgb(51, 51, 51);"] {
-        color: var(--text-color)!important;
-    }
-}
-
-@-moz-document url("https://ucilnica.fmf.uni-lj.si/course/view.php?id=299") {
-    /* Delovna praksa 1 & 2 */
-    [style="color: rgb(0, 0, 0); "] {
-        color: var(--text-color)!important;
-    }
-}
+/* ---- Login ---- */
