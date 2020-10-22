@@ -3,7 +3,7 @@
 Temna tema za spletno učilnico FMF. Fork [FRI dark theme](https://github.com/janvasiljevic/fri-dark-theme). Barva poudarka in svetlost besedila sta nastavljiva.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/hackguy25/fmf-dark-theme/master/images/sample.png"/>
+  <img src="https://raw.githubusercontent.com/Hexte/arnes-dark-theme/master/images/sample.png"/>
 </p>
 
 ## Namestitev
