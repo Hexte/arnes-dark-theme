@@ -1,4 +1,4 @@
-# FMF dark theme
+# Arnes dark theme
 
 Temna tema za spletno učilnico Arnes. Fork [FRI dark theme](https://github.com/janvasiljevic/fri-dark-theme). Barva poudarka in svetlost besedila sta nastavljiva.
 
